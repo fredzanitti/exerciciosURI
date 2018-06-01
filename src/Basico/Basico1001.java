@@ -11,7 +11,6 @@ public class Basico1001 {
 		int X = A + B;
 		
 		System.out.println("X = " + X);
-		sc.close();
- 
+		sc.close(); 
     }
 }
