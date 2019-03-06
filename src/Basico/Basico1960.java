@@ -1,12 +1,15 @@
 package Basico;
 import java.util.Scanner;
 
+import Funcoes_Comuns.DigitarNumeros;
+
 public class Basico1960 {
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
 		StringBuffer st = new StringBuffer();
+		DigitarNumeros digitar = new DigitarNumeros();
 		
-		int num = digitarNumero(s, 0, 1000);
+		int num = digitar.digitarNumeroInteiros(s, 0, 1000);
 		int nCent = num - (num % 100);
 		int nDez = (num - (num % 10)) - nCent;
 		int nUni = num - nCent - nDez;
@@ -78,13 +81,4 @@ public class Basico1960 {
 			st.append("IX");
 		}
 	}
-	
-	private static int digitarNumero(Scanner s, int min, int max) {
-		int x = s.nextInt();
-		while ((x <= min) || (x >= max)) {
-			x = s.nextInt();	
-		}
-		return x;
-	}
-
 }
