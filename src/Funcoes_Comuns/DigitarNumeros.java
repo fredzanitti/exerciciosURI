@@ -14,5 +14,13 @@ public class DigitarNumeros {
 		}
 		return x;		
 	}
+	
+	public double digitarNumDouble(Scanner s, Double min, Double max) {
+		double x = s.nextDouble();
+		while ((x < min) || (x > max)) {
+			x = s.nextDouble();	
+		}
+		return x;
+	}	
 
 }

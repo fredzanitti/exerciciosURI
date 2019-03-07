@@ -1,17 +1,20 @@
 package Basico;
 import java.util.Scanner;
 
+import Funcoes_Comuns.DigitarNumeros;
+
 public class Basico1973 {
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
+		DigitarNumeros digitar = new DigitarNumeros();
 		
-		int estrelas = digitarNumero(s, 0, Math.pow(10, 6));
+		int estrelas = digitar.digitarNumeroInteiros(s, 0, (int) Math.pow(10, 6));
 		int[] ovelhas = new int[estrelas];
 		int soma = 0;
 		int cont = 0;
 		
 		for (int i = 0; i < estrelas; i++) {
-			ovelhas[i] = digitarNumero(s, 0, Math.pow(10, 6));
+			ovelhas[i] = digitar.digitarNumeroInteiros(s, 0, (int) Math.pow(10, 6));
 		}
 		int j = 0;
 		
@@ -29,13 +32,4 @@ public class Basico1973 {
 		}
 		System.out.println(cont + " " + soma);		
 	}
-	
-	private static int digitarNumero(Scanner s, int min, double d) {
-		int x = s.nextInt();
-		while ((x <= min) || (x >= d)) {
-			x = s.nextInt();	
-		}
-		return x;
-	}
-
 }

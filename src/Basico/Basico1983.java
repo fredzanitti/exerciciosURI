@@ -1,10 +1,14 @@
 package Basico;
 import java.util.Scanner;
 
+import Funcoes_Comuns.DigitarNumeros;
+
 public class Basico1983 {
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
-		int qtde = digitarNumero(s, 3, 100);
+		DigitarNumeros digitar = new DigitarNumeros();
+		
+		int qtde = digitar.digitarNumeroInteiros(s, 3, 100);
 		int[] m = new int[qtde];
 		double[] n = new double[qtde];
 		double nMaior = 0;
@@ -15,13 +19,13 @@ public class Basico1983 {
 		}
 		
 		for (int i = 0; i < qtde; i++) {
-			m[i] = digitarNumero(s, 1, 1000000);
-			n[i] = digitarNumDouble(s, 0.0, 10.0);
+			m[i] = digitar.digitarNumeroInteiros(s, 1, 1000000);
+			n[i] = digitar.digitarNumDouble(s, 0.0, 10.0);
 			
 			for (int j = 0; j < n.length; j++) {
 				if (n[i] == n[j]) {
 					System.out.println("digite nota novamente");
-					n[i] = digitarNumDouble(s, 0.0, 10.0);		
+					n[i] = digitar.digitarNumDouble(s, 0.0, 10.0);		
 				}
 			}
 			
@@ -37,21 +41,5 @@ public class Basico1983 {
 			System.out.println(mMaior);
 		}
 		
-	}
-	
-	private static int digitarNumero(Scanner s, int min, int max) {
-		int x = s.nextInt();
-		while ((x < min) || (x > max)) {
-			x = s.nextInt();	
-		}
-		return x;
-	}
-	
-	private static double digitarNumDouble(Scanner s, Double min, Double max) {
-		double x = s.nextDouble();
-		while ((x < min) || (x > max)) {
-			x = s.nextDouble();	
-		}
-		return x;
 	}
 }
