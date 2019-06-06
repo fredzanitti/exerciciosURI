@@ -24,7 +24,7 @@ public class Basico2139 {
 			} else if ((dia == 25) && (mes == 12)) {
 				System.out.println("E natal!");
 			} else if ((dia > 25) && (mes == 12)) {
-				System.out.println("Ja passou!");
+				System.out.println("O Natal ja era!");
 			} else {
 				System.out.println("Faltam " + diasFaltantes(dia, mes) + " dias para o natal!");
 			}
