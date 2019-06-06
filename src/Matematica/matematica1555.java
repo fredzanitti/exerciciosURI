@@ -24,12 +24,12 @@ public class matematica1555 {
 			int vlrC = formulaCarlos(x, y);
 			
 			if (vlrR == m.maiorDeTres(vlrR, vlrB, vlrC)) {
-				System.out.println("Rafael ganhou");
+				System.out.println("Rafael GANHOU");
 			} else {
 				if (vlrB == m.maiorDeTres(vlrR, vlrB, vlrC)) {
-					System.out.println("Beto ganhou");
+					System.out.println("Beto GANHOU");
 				} else {
-					System.out.println("Carlos ganhou");
+					System.out.println("Carlos GANHOU");
 				}
 			}
 		}
